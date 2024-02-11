@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/registroc.css">
+    <link href="https://fonts.googleapis.com/css2?family=Boogaloo&display=swap" rel="stylesheet">
+    
+</head>
+<body> 
+    <img id="photo" src="img/fondo2.jpg" alt="fondo">
+    <main>
+    <div id="centrado">
+        <form action="../controller/ControllerUsuario.php"method="post">
+            <div id="izq">
+            <label for="">ingresa tu nombre: </label>
+            <input type="text" name="nombre" value="" required >
+            <br>
+            
+            <label for="">ingresa tu correo</label>
+            <input type="email" name="correo" value="">
+            <br>
+           
+            <label for="">ingresa tu telefono</label>
+            <input type="number" min="0" name="telefono" value="">
+            <br>
+            </div>
+            <div id="der">
+            
+            <label for="">ingresa tu apellido</label>
+            <input type="text" name="apellido" value="">
+            <br>
+             <label for="">ingresa tu fecha de nacimiento</label>
+            <input type="date" name="fechaNac" value="">
+            <br>
+            <label for="">ingresa tu contraseña</label>
+            <input type="password" name="contraseña" value="" required>
+            <br>
+            </div>
+            <div id="botones">
+             <button type="submit">registrate</button>
+            </div>
+            <br>
+    
+        </form>
+    </div>
+    </main>
+</body>
+</html>

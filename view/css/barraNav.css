@@ -1,0 +1,31 @@
+*{margin: 0;
+  list-style: none;
+padding: 0;
+}
+
+body{
+    background: aqua;
+}
+
+nav{
+    position: relative;
+    width: 800px ;
+    height: 40PX;
+    background: orange;
+    margin:  20% auto;
+    border-radius: 10px;
+}
+
+.botones{
+    float: left;
+    width: 11%;
+    text-align: center;
+    margin: 0% 7.001%;
+    /*background: rgb(66, 37, 37);*/
+    color: aquamarine;
+    line-height: 40PX;
+    font-family: 'Kavivanar', cursive;
+}
+.botones:hover{
+    background: rgba(245, 245, 245, 0.208);
+}

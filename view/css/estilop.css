@@ -1,0 +1,60 @@
+*{padding: 0px;
+margin: 0px;
+box-sizing: border-box;
+}
+
+body{
+    background-image: url(fondo2.jpg);
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-size: 100% 140%;
+    background-attachment: scroll;
+    font-family: 'Boogaloo', cursive;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    gap: 1%; 
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-content: center ;
+    margin-top: 100px;
+    
+}
+
+.container div{ 
+    text-align: center;
+    color: black;
+    /* border: 1px solid black;  */
+    padding: 10% ;
+
+}
+#logo{
+    width: 100%;
+    height: auto;
+    align-content: center;
+    
+} 
+#logo img {
+    background: white;
+    width: 90%;
+    height: auto;
+    top: 50%;
+}
+#texto{
+    width: 100%;
+    height: auto;
+    
+}
+#texto p{
+    font-size: 100%;
+}
+.sesion{
+    background: rgba(0, 255, 255, 0.166);
+    justify-content: center;
+    align-content: center ;
+    border-radius: 2%;
+}
+
