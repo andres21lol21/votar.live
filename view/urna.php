@@ -3,6 +3,7 @@ require_once ('../conexion/conexion.php');
 
 $sql="SELECT * FROM eleccion ";
 
+
 $urna= $con->query($sql);
 
 ?>
@@ -34,7 +35,10 @@ $urna= $con->query($sql);
     </div>
 
     
-    <div id="columna2">
+    <div id="columna2urna">
+      
+      <?php include '../view/candidatos.php'; ?>
+      
       <div class="container3">
       <h1>datos urna</h1>
       <?php
@@ -77,11 +81,9 @@ $urna= $con->query($sql);
     }
 
     ?>
-
-
-        
+ 
      </div>
-
+  
     </div>
 
   </div>

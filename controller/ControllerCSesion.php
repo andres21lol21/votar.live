@@ -17,6 +17,6 @@ if (ini_get("session.use_cookies")) {
 session_destroy();
 
 // Redirigir a una página de confirmación de cierre de sesión u otra página deseada
-header("Location: ../view/index.php");
+header("Location: ../index.php");
 exit();
 ?>

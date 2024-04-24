@@ -45,6 +45,9 @@ body{
 .cerrar-menu{
   display: none;
 }
+#informacionCandidatos{
+  display: flex;
+}
 
   
   @media (min-width:600px )and (max-width: 900px){
@@ -110,7 +113,7 @@ body{
       top: 0;
       left: 0;
       padding: 2rem;
-      bottom: 0;
+      /* bottom: 0; */
       box-shadow:  0 0 100vmax   0 black ;
      padding-top: 7.5rem;
      }
@@ -156,7 +159,8 @@ body{
       margin: 0 1% 0 0 ;
       background-color: white;
       border-radius: 10px;
-       
+      
+    
   }
   
     .abrir-menu,
@@ -189,7 +193,7 @@ body{
       top: 0;
       left: 0;
       padding: 2rem;
-      bottom: 0;
+      /* bottom: 0; */
       box-shadow:  0 0 100vmax   0 black ;
       padding-top: 7.5rem;
      }
@@ -245,18 +249,28 @@ body{
     text-decoration: none;
     color: black;
 }
-
-
-
-
+#columna2urna{text-align: center;
+  gap: 10%;
+  color: black;
+  border: 1px solid black;
+  padding: 3% ;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 10px;
+   
+}
 
 #columna2{text-align: center;
+    
     color: black;
     border: 1px solid black;
-    padding: 1% ;
-    
+    padding: 2% ;
     background-color: white;
     border-radius: 10px;
+    
      
 }
 #columna2perfil{
@@ -283,14 +297,18 @@ body{
 }
 .container2{
     width: 100%;
-    height: auto;
+    /* height: auto;  */
     display: grid;
     grid-template-columns: 30% 30% 30% ;
     gap: 1% 5%;
     margin: 0;
     /* border: 1px solid black; */
     float: left; 
-    padding: 3% 1%;
+    padding: 1% 1%;
+    
+    height: 500px; /* Define la altura deseada del contenedor */
+    overflow-y: auto; /* Añade un scroll vertical cuando sea necesario */
+    overflow-x: hidden; /* Oculta el scroll horizontal */
    
 }
 .container2 div{ 
@@ -307,11 +325,11 @@ body{
     text-decoration: none;
 }
 
-header img{
+/* header img{
     /* width: 20%; */
     /* justify-content: center;
-    align-content: center ; */
-}
+    align-content: center ; 
+} */
 .table {
   display: table;
   text-align: center;
@@ -327,6 +345,10 @@ header img{
 }
 .table tbody tr:nth-child(even) {
   background-color: #f9f9f9;
+}
+
+.btn bnt-primary{
+  cursor: pointer;
 }
 
 

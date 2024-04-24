@@ -10,7 +10,7 @@ if (isset($_POST['eliminar'])) {
     $sql = "DELETE FROM eleccion WHERE ideleccion = $id";
     $urna= $con->query($sql);
 
-    header('Location:../view/index.php');
+    header('Location:../view/inicio.php');
 }
 elseif(isset($_POST['actualizar'])){
     $id = $_POST['ideleccion'];
@@ -32,7 +32,7 @@ elseif(isset($_POST['actualizar'])){
     $sql= "UPDATE eleccion SET titulo='$titulo', descripcion='$descripcion', fechaInicio ='$Finicio', fechaFin ='$Ffin'  WHERE eleccion.ideleccion= $id";
     $urna= $con->query($sql);
 
-    header('Location:../view/index.php');
+    header('Location:../view/inicio.php');
 
 }
 else {
@@ -53,7 +53,7 @@ else {
     $sql = "INSERT INTO eleccion (titulo, descripcion, fechaInicio, fechaFin) VALUES ('$titulo', '$descripcion','$Finicio','$Ffin')";
 
     if ($con->query($sql)){
-        header('Location:../view/index.php');
+        header('Location:../view/inicio.php');
     }else {
         echo "error";
     }

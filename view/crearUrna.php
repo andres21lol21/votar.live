@@ -23,25 +23,23 @@
    
     <?php include '../view/menu.html'; ?>
 
-      
-
     </div>
-
     
     <div id="columna2crear">
-    <form action="../controller/controllerUrna.php"method="post">
+    <form id="formularioUrna" action="../controller/controllerUrna.php"method="post">
         <input type="hidden" name="id" value="<?php echo($id) ?>">
         <label for="">Titulo</label>
-        <input type="text" name="titulo">
+        <input type="text" id="titulo" name="titulo">
         <br>
         <label for="">Descripcion</label>
-        <input type="text" name="descripcion">
+        <input type="text" id="descripcion" name="descripcion">
         <br>
-        <label for="">Fecha Inicio</label>
-        <input type="date" name="fechaInicio">
+        <label for="fechaInicio">Fecha Inicio</label>
+        <input type="date" id="fechaInicio" name="fechaInicio">
         <br>
-        <label for="">Fecha Fin</label>
-        <input type="date" name="fechaFin">
+        <label for="fechaFin">Fecha Fin</label>
+        <input type="date" id="fechaFin" name="fechaFin">
+
         <br>
         <button type="submit">Crear Urna</button>
 
@@ -55,6 +53,10 @@
 <footer>
 
 </footer>
+<script src="../view/js/fecha.js">
+ 
+</script>
+<script>validarFechas();</script>
 
 
 </body>

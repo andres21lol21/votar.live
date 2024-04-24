@@ -1,11 +1,13 @@
 *{
     margin: 0;
-    padding: 0;
+    padding: 0;  
 
 }
+
 body{
     font-family: 'Boogaloo', cursive;
     font-size:x-large;
+     background-color: rgb(15, 167, 194);
 }
 
 #centrado{

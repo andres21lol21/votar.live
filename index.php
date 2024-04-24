@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>proyecto</title>
-    <link rel="stylesheet" href="../view/css/estilop.css">
+    <link rel="stylesheet" href="view/css/estilop.css">
     <link href="https://fonts.googleapis.com/css2?family=Boogaloo&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -13,7 +13,7 @@
     <main>
         <div class="container">
             <div >
-                 <div id="logo" > <img src="img/Black___White_Minimalist_Business_Logo-removebg-preview.png" alt=""> </div>
+                 <div id="logo" > <img src="view/img/Black___White_Minimalist_Business_Logo-removebg-preview.png" alt=""> </div>
                    <div id="texto">
                 <h1> VOTACIONES MAS SEGURAS</p></div>
             </div>
@@ -23,7 +23,7 @@
             <h1> INICIO DE SESION</h1>
             
             
-            <form action="../controller/ControllerSesion.php"method="post">
+            <form action="controller/ControllerSesion.php"method="post">
 
                 <div>
                 <label for="">CORREO</label>

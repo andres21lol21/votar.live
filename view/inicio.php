@@ -43,15 +43,15 @@ $urna= $con->query($sql);
       <div  >
         
             <tr>
-                <td>ID URNA: <?php echo ($fila['ideleccion']) ?> </td>
-                <br>
                 <td><?php echo ($fila['titulo']) ?> </td>
+                <br>
+                <td>ID : <?php echo ($fila['ideleccion']) ?> </td>
                 <br>
                 <td><?php echo ($fila['descripcion']) ?></td>
                 <br>
-                <td><?php echo ($fila['fechaInicio']) ?></td>
+                <td>fecha inicio : <?php echo ($fila['fechaInicio']) ?></td>
                 <br>
-                <td><?php echo ($fila['fechaFin']) ?></td>
+                <td>fecha cierre : <?php echo ($fila['fechaFin']) ?></td>
                     
       </div>
       </a>  
