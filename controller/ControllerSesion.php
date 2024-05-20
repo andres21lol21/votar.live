@@ -10,12 +10,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($resultado->num_rows > 0) {
         $_SESSION['correo'] = $correo;
-        header("Location: ../view/inicio.php");
+        
+        header("Location: ../view/rol.php");
         exit();
-    } else {
-        header("Location: ../view/error.php");
-        exit();
-    }
+    }else {
+        header("Location: ../index.php");
+         exit();
+     }
 } else {
     header("Location: ../view/error.php");
     exit();

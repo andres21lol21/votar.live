@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['idUrna'])) {
         $mensajeError = "No se encontró ninguna urna con ese ID.";
     } else {
         
-        header("Location: ../view/detalleUrna.php?idUrna=$idUrna");
+        header("Location: ../../view/Admin/detalleUrna.php?idUrna=$idUrna");
         exit();
     }
 }

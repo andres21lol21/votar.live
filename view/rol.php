@@ -23,12 +23,12 @@ $usuario= $con->query($sql);
 <body>
 
   <header>
-    <?php include '../view/navbar.html'; ?>
+     <?php include '../view/navbar1.html'; ?> 
   
   </header>
   <div class="container">
 
-    <?php include '../view/menu.html'; ?>
+    <?php //include '../view/menu.html'; ?>
 
 
       
@@ -41,12 +41,12 @@ $usuario= $con->query($sql);
       
       <form action="../controller/ControllerRol.php" method="post">
       <div id="columna2">
-          <label>Selecciona tu nuevo rol:</label>
+          <label>Selecciona tu rol:</label>
           <select name="nuevo_rol">
               <option value="administrador">Administrador</option>
               <option value="votante">Votante</option>
           </select>
-          <button type="submit">Cambiar Rol</button>
+          <button type="submit">seleccionar Rol</button>
       </div>
       </form>
     </div>

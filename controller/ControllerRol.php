@@ -14,7 +14,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Actualización exitosa, actualizar la sesión con el nuevo rol
         $_SESSION['rol'] = $nuevoRol;
         // Redirigir a una página de éxito o mostrar un mensaje en la misma página
-        header("Location: ../view/rol.php");
+        if ($nuevoRol ==='administrador'){
+            header("Location: /proyecto/view/Administrador/inicio.php");
+        }
+        elseif($nuevoRol==='votante'){
+            header("Location: ../view/Votante/inicio.php");
+        }
         exit();
     } else {
         // Si hay un error en la actualización, almacenar un mensaje de error en una variable de sesión

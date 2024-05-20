@@ -1,5 +1,5 @@
 <?php
-require_once('../conexion/conexion.php');
+require_once('../../conexion/conexion.php');
 session_start();
 
 function obtenerDatosUsuario($conexion) {

@@ -39,6 +39,9 @@ body{
     align-content: center ;
     margin-top: 100px;
     margin: 1% black; */
+    overflow-y: auto; /* Añade un scroll vertical cuando sea necesario */
+    overflow-x: hidden; /* Oculta el scroll horizontal */
+   
     }
 
 .abrir-menu,
@@ -113,7 +116,7 @@ body{
       top: 0;
       left: 0;
       padding: 2rem;
-      /* bottom: 0; */
+      bottom: 0;
       box-shadow:  0 0 100vmax   0 black ;
      padding-top: 7.5rem;
      }
@@ -193,7 +196,7 @@ body{
       top: 0;
       left: 0;
       padding: 2rem;
-      /* bottom: 0; */
+      bottom: 0;
       box-shadow:  0 0 100vmax   0 black ;
       padding-top: 7.5rem;
      }
@@ -261,6 +264,35 @@ body{
   background-color: white;
   border-radius: 10px;
    
+}
+#columna2urna1{
+  text-align: center;
+  gap: 10%;
+  color: black;
+  border: 1px solid black;
+  padding: 3% ;
+  /* display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: flex-start; */
+  background-color: white;
+  border-radius: 10px;
+   
+}
+.tablaContainer{
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px; /* Espacio entre tablas */
+  th, td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+}
+th, td {
+  border: 1px solid black;
+  padding: none;
+  text-align: left;
+}
 }
 
 #columna2{text-align: center;

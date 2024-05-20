@@ -15,7 +15,8 @@
             <div >
                  <div id="logo" > <img src="view/img/Black___White_Minimalist_Business_Logo-removebg-preview.png" alt=""> </div>
                    <div id="texto">
-                <h1> VOTACIONES MAS SEGURAS</p></div>
+                <!-- <h1> VOTACIONES MAS SEGURAS</p>   -->
+            </div>
             </div>
 
         <div >
@@ -23,15 +24,15 @@
             <h1> INICIO DE SESION</h1>
             
             
-            <form action="controller/ControllerSesion.php"method="post">
+            <form id="formIS" action="controller/ControllerSesion.php"method="post">
 
                 <div>
                 <label for="">CORREO</label>
-                <input type="email"  name="correo" />
+                <input id="correo" type="email"  name="correo" />
                 </div>
                 <div>
                 <label > CONTRASEÑA </label>
-                <input type="password" min="" name="pass" />
+                <input id ="contrasena"type="password" min="" name="pass" />
                 </div>
                 <p class="registro">¿NO TIENES CUENTA? <A class="registro" href="registro.html"> REGISTRATE</p> </A>
                 <button type="submit"> INICIAR SESION </button>
@@ -44,6 +45,6 @@
        </div>
         
     </main>
-
+<script src="/proyecto/view/js/validacionInSesion.js"></script>
 </body>
 </html>
