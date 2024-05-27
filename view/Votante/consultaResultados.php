@@ -1,7 +1,8 @@
 <?php
 require_once ('../../conexion/conexion.php');
-$id= $_GET["idUrna"];
-$sql="SELECT * FROM eleccion where ideleccion=".$id;
+
+$sql="SELECT * FROM eleccion ";
+
 $urna= $con->query($sql);
 
 ?>
@@ -38,7 +39,7 @@ $urna= $con->query($sql);
             if ($urna) {
                  while ($fila= mysqli_fetch_assoc($urna)){
       ?>
-      <a href="../../view/Votante/urnaCandidatos.php?ideleccion=<?php echo($fila['ideleccion']) ?>">
+      <a href="../../view/Administrador/urnaCandidatos.php?ideleccion=<?php echo($fila['ideleccion']) ?>">
       <div  >
         
             <tr>

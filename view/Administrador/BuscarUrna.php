@@ -32,10 +32,11 @@ $urna= $con->query($sql);
     <div id="columna2">
        
         <h1>Buscar Urna por ID</h1>
-    <form id="busqueda" action="../../view/Administrador/detalleUrna.php" method="GET">
+        <form id="busqueda" action="../../view/Administrador/detalleUrna.php" method="GET">
         <label for="idUrna1" >ID de Urna:</label>
         <input type="text" id="idU" name="idUrna" required>
         <button type="submit">Buscar</button>
+        
     </form>
     </div>
 

@@ -39,7 +39,7 @@ $urna= $con->query($sql);
             if ($urna) {
                  while ($fila= mysqli_fetch_assoc($urna)){
       ?>
-      <a href="../../view/Administrador/urna.php?ideleccion=<?php echo($fila['ideleccion']) ?>">
+      <a href="../../view/Votante/urnaCandidatos.php?ideleccion=<?php echo($fila['ideleccion']) ?>">
       <div  >
         
             <tr>

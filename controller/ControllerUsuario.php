@@ -9,7 +9,7 @@ require_once ('../conexion/conexion.php');
     $correo = $_POST['correo'];
     $contraseña = $_POST['contraseña'];
    
-    // Verificar si el usuario ya está registrado
+    // Verificar si el usuario ya esta registrado
     $consulta = "SELECT * FROM usuario WHERE correo = '$correo'";
     $resultado = $con->query($consulta);
 

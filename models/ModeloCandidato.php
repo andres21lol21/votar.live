@@ -11,12 +11,16 @@ class candidato {
 
     private $partido;
 
-    function __construct($nombre,$apellido,$edad,$descripcion,$partido){
+    private $urna;
+
+
+    function __construct($nombre,$apellido,$edad,$descripcion,$partido,$urna){
         $this -> nombre=$nombre;
         $this -> apellido=$apellido;
         $this -> edad=$edad;
         $this -> descripcion=$descripcion;
         $this -> partido=$partido;
+        $this -> urna=$urna;
     }
 
     function getNombre(){
@@ -24,7 +28,7 @@ class candidato {
     }
 
     function getApellido(){
-        return $this -> nombre;
+        return $this -> apellido;
     }
 
     function getEdad(){
@@ -32,11 +36,15 @@ class candidato {
     }
 
     function getDescripcion(){
-        return $this ->descripcion;
+        return $this -> descripcion;
     }
 
     function getPartido(){
         return $this -> partido;
+    }
+
+    function getUrna(){
+        return $this -> urna;
     }
 
 }

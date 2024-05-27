@@ -3,6 +3,7 @@ require_once ('../../conexion/conexion.php');
 require_once ('../../controller/ControllerValidacionSesion.php');
 
 $datosUsuario = obtenerDatosUsuario($con);
+
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +26,7 @@ $datosUsuario = obtenerDatosUsuario($con);
     </header>
 
     <div class="container">
-        <?php include '../../view/menu.html'; ?>
+        <?php include '../../view/Votante/menu.html'; ?>
     </div>
 
     <div id="columna2perfil">

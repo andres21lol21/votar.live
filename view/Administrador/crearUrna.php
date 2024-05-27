@@ -53,7 +53,7 @@
 <footer>
 
 </footer>
-<script src="../view/js/fecha.js">
+<script src="../../view/js/fecha.js">
  
 </script>
 <script>validarFechas();</script>

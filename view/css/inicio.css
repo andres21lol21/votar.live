@@ -39,8 +39,8 @@ body{
     align-content: center ;
     margin-top: 100px;
     margin: 1% black; */
-    overflow-y: auto; /* Añade un scroll vertical cuando sea necesario */
-    overflow-x: hidden; /* Oculta el scroll horizontal */
+    /* overflow-y: auto; /* Añade un scroll vertical cuando sea necesario 
+    overflow-x: hidden; Oculta el scroll horizontal */
    
     }
 
@@ -331,6 +331,7 @@ th, td {
     width: 100%;
     /* height: auto;  */
     display: grid;
+    align-content: space-between;
     grid-template-columns: 30% 30% 30% ;
     gap: 1% 5%;
     margin: 0;

@@ -26,13 +26,13 @@ $urna= $con->query($sql);
     </header>
 
     <div class="container">
-        <?php include '../../view/menu.html'; ?>
+        <?php include '../../view/Votante/menu.html'; ?>
     </div>
 
     <div id="columna2">
        
         <h1>Buscar Urna por ID</h1>
-    <form id="busqueda" action="../../view/Administrador/detalleUrna.php" method="GET">
+    <form id="busqueda" action="../../view/Votante/detalleUrna.php" method="GET">
         <label for="idUrna1" >ID de Urna:</label>
         <input type="text" id="idU" name="idUrna" required>
         <button type="submit">Buscar</button>
