@@ -1,12 +1,19 @@
 <?php
 require_once ('../../conexion/conexion.php');
 $idBusqueda= $_GET["ideleccion"];
-$sql="SELECT * FROM candidato where ideleccion=".$idBusqueda;
-$sql1="SELECT * FROM eleccion where ideleccion=".$idBusqueda;
+// $sql="SELECT * FROM candidato where ideleccion=".$idBusqueda;
+$sql="SELECT candidato.*,
+voto.id_candidato AS id_candidato, 
+voto.eleccion_ideleccion AS id_eleccion
+FROM candidato
+INNER JOIN voto ON candidato.ideleccion = voto.eleccion_ideleccion
+WHERE candidato.ideleccion =".$idBusqueda;
+// $sql1="SELECT * FROM eleccion where ideleccion=".$idBusqueda;
+// $sql2="SELECT * FROM voto where eleccion_ideleccion".$idBusqueda;
 
 
 $candidatos= $con->query($sql);
-$urna= $con->query($sql1);
+// $voto= $con->query($sql2);
 
 ?>
 
@@ -39,12 +46,12 @@ $urna= $con->query($sql1);
     
     <div id="columna2"  >
       <div class="container2" >
-          <div>
+           <div>
             
-            <?php
+            <!-- <?php
         
-                if ($urna) {
-                  $fila1= mysqli_fetch_assoc($urna);{ 
+                if ($voto) {
+                  $fila1= mysqli_fetch_assoc($voto);{ 
 
             ?>
 
@@ -53,10 +60,10 @@ $urna= $con->query($sql1);
             <?php
                   }
                   }
-            ?> 
+            ?>  -->
 
           </div>
-          
+           
           <?php
                 if ($candidatos) {
                     while ($fila= mysqli_fetch_assoc($candidatos)){
@@ -78,11 +85,13 @@ $urna= $con->query($sql1);
                           <td>partido : <?php echo ($fila['partido']) ?></td>
                           <br>
                           <td>Descripcion: <?php echo ($fila['descripcion']) ?></td>
+                          <br>
+                          <td>cantidad de votos: <?php echo ($fila['id_candidato']) ?></td>
                       </tr>
                       <br>
-                      <input type="hidden" name="idbusqueda" value="<?php echo $idBusqueda ?>">
+                       <input type="hidden" name="idbusqueda" value="<?php echo $idBusqueda ?>">
                       <input type="hidden" name="eliminar">
-                      <button type="sumbit">eliminar</button>
+                      <button type="sumbit">eliminar</button> 
                 </form>
                 
                 </div>

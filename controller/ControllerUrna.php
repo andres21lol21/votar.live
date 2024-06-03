@@ -2,6 +2,8 @@
 require_once ('../models/ModeloUrna.php');
 require_once ('../conexion/conexion.php');
 
+
+
 if (isset($_POST['eliminar'])) {
     
     $id = $_POST['ideleccion'];
@@ -12,6 +14,20 @@ if (isset($_POST['eliminar'])) {
 
     header('Location:/proyecto/view/Administrador/inicio.php');
 }
+
+elseif (isset($_POST['guardar_estado'])) {
+    
+    $id = $_POST['ideleccion'];
+    echo $id;
+
+    $estado= $_POST['estado'];
+
+    $sql = "UPDATE eleccion set estado='$estado' where eleccion.ideleccion=$id";
+    $urna= $con->query($sql);
+
+    header('Location:/proyecto/view/Administrador/inicio.php');
+} 
+
 elseif(isset($_POST['actualizar'])){
     $id = $_POST['ideleccion'];
     echo $id;

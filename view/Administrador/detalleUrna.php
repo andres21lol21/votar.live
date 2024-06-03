@@ -1,10 +1,18 @@
 <?php
 require_once ('../../conexion/conexion.php');
-$id= $_GET["idUrna"];
-$sql="SELECT * FROM eleccion where ideleccion=".$id;
 
-$urna= $con->query($sql);
+$id = isset($_GET['idUrna']) ? (int)$_GET['idUrna'] : 0;
 
+if ($id > 0) {
+    $sql = "SELECT * FROM eleccion WHERE ideleccion = ?";
+    $stmt = $con->prepare($sql);
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+    $urna = $stmt->get_result();
+} else {
+    echo "ID de urna no válido.";
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +47,7 @@ $urna= $con->query($sql);
             if ($urna) {
                  while ($fila= mysqli_fetch_assoc($urna)){
       ?>
-      <a href="../../view/urna.php?ideleccion=<?php echo($fila['ideleccion']) ?>">
+      <a href="../../view/Administrador/urnaCandidatos.php?ideleccion=<?php echo($fila['ideleccion']) ?>" onclick="verificarEstado()">
       <div  >
         
             <tr>
@@ -52,6 +60,10 @@ $urna= $con->query($sql);
                 <td>fecha inicio : <?php echo ($fila['fechaInicio']) ?></td>
                 <br>
                 <td>fecha cierre : <?php echo ($fila['fechaFin']) ?></td>
+                <br>
+                <td id="estadoU">estado : <?php echo ($fila['estado']) ?></td>
+                <input type="hidden" id="estadoU" value="<?php echo($fila['estado']) ?>">
+                
                     
       </div>
       </a>  
@@ -71,6 +83,7 @@ $urna= $con->query($sql);
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="/proyecto/view/js/validacionUrna.js"></script>
 </body>
 
 </html>

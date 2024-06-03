@@ -31,8 +31,8 @@ $urna= $con->query($sql);
 
     <div id="columna2">
        
-        <h1>Buscar Urna por ID</h1>
-    <form id="busqueda" action="../../view/Votante/detalleUrna.php" method="GET">
+         <h1>Buscar Urna por ID</h1>
+        <form id="busqueda" action="../../Controller/ControllerBuscarUrnaVotante.php" method="post">
         <label for="idUrna1" >ID de Urna:</label>
         <input type="text" id="idU" name="idUrna" required>
         <button type="submit">Buscar</button>

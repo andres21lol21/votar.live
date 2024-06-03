@@ -52,6 +52,8 @@ $urna= $con->query($sql);
                 <td>fecha inicio : <?php echo ($fila['fechaInicio']) ?></td>
                 <br>
                 <td>fecha cierre : <?php echo ($fila['fechaFin']) ?></td>
+                <br>
+                <td>estado : <?php echo ($fila['estado']) ?></td>
                     
       </div>
       </a>  

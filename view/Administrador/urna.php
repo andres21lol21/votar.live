@@ -61,6 +61,7 @@ $urna= $con->query($sql);
             <th><label for="">descripcion</label></th>
             <th><label for="">fecha inicio</label></th>
             <th><label for="">fecha fin</label></th>
+            <th><label for="">estado</label></th>
           </tr>
         </thead>
         <tbody>
@@ -73,6 +74,16 @@ $urna= $con->query($sql);
                 <br>
                 <td><input type="date" name="fechaFin"  value="<?php echo $fila['fechaFin'] ?>"></td>
                 <br>
+                <td>
+                      <form action="../../controller/ControllerUrna.php"method="post" id="estadoUrna">
+                        <select name="estado" id="estado">
+                          <option value="activa">activar</option>
+                          <option value="desactiva">desactivar</option>
+                        </select>  
+                    <br><br>
+                    <input type="hidden" name="ideleccion" value="<?php echo($fila['ideleccion']) ?>">
+                    <input type="submit" value="actualizar" name="guardar_estado"></td>
+                      </form>
           </tr>
         </tbody>
     </table>
@@ -108,7 +119,7 @@ $urna= $con->query($sql);
     <?php include '../../view/footer.html'; ?>
 </footer>
 
-
+<script></script>
 </body>
 
 </html>

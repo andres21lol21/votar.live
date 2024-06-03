@@ -41,7 +41,7 @@ $urna= $con->query($sql);
       ?>
       <a href="../../view/Administrador/urnaCandidatos.php?ideleccion=<?php echo($fila['ideleccion']) ?>">
       <div  >
-        
+          
             <tr>
                 <td><?php echo ($fila['titulo']) ?> </td>
                 <br>
