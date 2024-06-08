@@ -70,9 +70,14 @@ if ($stmtTotal = $con->prepare($sqlTotal)) {
         <?php
         if ($candidatos) {
           foreach ($candidatos as $fila) {
+            if ($fila['eliminado']) {
+              $status = "(Eliminado)";
+            } else {
+              $status = "";
+            }
         ?>
           <div>
-            <h3><?php echo $fila['nombre'] . ' ' . $fila['apellido']; ?></h3>
+            <h3><?php echo $fila['nombre'] . ' ' . $fila['apellido'] . ' ' . $status; ?></h3>
             <p>ID: <?php echo $fila['idcandidato']; ?></p>
             <p>Edad: <?php echo $fila['edad']; ?></p>
             <p>Partido: <?php echo $fila['partido']; ?></p>

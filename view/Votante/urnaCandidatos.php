@@ -4,10 +4,9 @@ require_once ('../../controller/ControllerValidacionSesion.php');
 
 $idBusqueda= $_GET["ideleccion"];
 $datosUsuario = obtenerDatosUsuario($con);
-$sql="SELECT * FROM candidato where ideleccion=".$idBusqueda;
-$sql1="SELECT * FROM eleccion where ideleccion=".$idBusqueda;
+$sql="SELECT * FROM candidato WHERE ideleccion = $idBusqueda AND eliminado = 0"; // Modificación aquí
+$sql1="SELECT * FROM eleccion WHERE ideleccion = $idBusqueda";
 $fechaHoraActual = date('Y-m-d H:i:s');
-
 
 $candidatos= $con->query($sql);
 $urna= $con->query($sql1);

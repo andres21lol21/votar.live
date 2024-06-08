@@ -34,7 +34,7 @@
                 <label > CONTRASEÑA </label>
                 <input id ="contrasena"type="password" min="" name="pass" />
                 </div>
-                <p class="registro">¿NO TIENES CUENTA? <A class="registro" href="registro.html"> REGISTRATE</p> </A>
+                <p class="registro">¿NO TIENES CUENTA? <A class="registro" href="/proyecto/view/registro.html"> REGISTRATE</p> </A>
                 <button type="submit"> INICIAR SESION </button>
             </form>
                 

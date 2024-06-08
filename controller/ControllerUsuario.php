@@ -16,7 +16,7 @@ require_once ('../conexion/conexion.php');
     if ($resultado->num_rows > 0) {
         // El usuario ya está registrado, puedes redirigirlo a una página de error o mostrar un mensaje
         echo "<script>
-          alert('el usuario ya se encuentra registrado'); window.location.href='../view/index.php';</script>";
+          alert('el usuario ya se encuentra registrado'); window.location.href='../index.php';</script>";
     } else {
 
 
@@ -32,7 +32,7 @@ require_once ('../conexion/conexion.php');
 
     if ($con->query($sql)){
         echo "<script>
-          alert('usuario registrado con exito'); window.location.href='../view/index.php';</script>";
+          alert('usuario registrado con exito'); window.location.href='../index.php';</script>";
         // header('Location:../view/index.php');
     }else {
         echo "error";
